@@ -102,7 +102,7 @@ table 123456701 "CSD Seminar"
     var
         SeminarSetup: Record "CSD Seminar Setup";
         Seminar: Record "CSD Seminar";
-        //CommentLine : Record "CSD Seminar Comment Line";
+        CommentLine : Record "CSD Seminar Comment Line";
         GenProdPostingGroup: Record "Gen. Product Posting Group";
         NoSeriesMgt: Codeunit NoSeriesManagement;
 
@@ -128,11 +128,11 @@ table 123456701 "CSD Seminar"
     trigger OnDelete();
     begin
         "Last Date Modified" := Today;
-        //CommentLine.Reset;
-        //CommentLine.SetRange("Table Name",
-        //CommentLine."Table Name"::Seminar); 
-        //CommentLine.SetRange("No.","No."); 
-        // CommentLine.DeleteAll;
+        CommentLine.Reset;
+        CommentLine.SetRange("Table Name",
+        CommentLine."Table Name"::Seminar); 
+        CommentLine.SetRange("No.","No."); 
+        CommentLine.DeleteAll;
     end;
 
     procedure AssistEdit(): Boolean;

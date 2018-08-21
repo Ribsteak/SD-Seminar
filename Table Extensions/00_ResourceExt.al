@@ -15,7 +15,7 @@ tableextension 123456700 "Resource Extension" extends Resource
             OptionMembers = "Internal","External";
             OptionCaption = 'Internal,External';
         }
-        field(123456702;"CSD Maximum Patricipants";Integer)       
+        field(123456702;"CSD Maximum Participants";Integer)       
         {
             Caption = 'Maximum Participants';
         }
